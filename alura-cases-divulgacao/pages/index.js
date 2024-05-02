@@ -1,4 +1,13 @@
-import Link from "next/link";
+import HomeScreen from "../src/screens/HomeScreen";
+
+
+export default HomeScreen
+
+
+
+
+
+/*import Link from "next/link";
 
 
 
@@ -25,4 +34,4 @@ export default function Home() {
             </Link>
         </div>
     )
-}
+}*/
