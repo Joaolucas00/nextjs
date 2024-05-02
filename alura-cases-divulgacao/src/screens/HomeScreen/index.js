@@ -2,6 +2,7 @@ import Footer from '../../components/Footer'
 import { theme } from '../../theme/theme';
 import { Image, Box, Text, Icon, Input, Button } from '../../theme/Componenetes';
 import Link from 'next/link'
+import Head from 'next/head'
 
 const LOGO_ALURA_URL = 'imagens/alura-logo.svg';
 const SIDE_IMAGE_URL = 'imagens/alura-cases.png'
@@ -21,6 +22,9 @@ function SideImage() {
         }
       }}
     >
+      <Head>
+        <title>Home - ALura Cases Campanha</title>
+      </Head>
       <Box
         styleSheet={{
           top: 0,

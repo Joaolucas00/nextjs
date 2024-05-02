@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 // getServerSideProps -> Roda a cada acesso que você recebe em produção
 // getStaticProps -> Roda SOMENTE em build time
@@ -27,6 +28,9 @@ export default function FAQPage({ faq }) {
     console.log("Roda no serviodr???");
     return (
         <div>
+        <Head>
+            <title>FAQ - ALura Cases Campanha</title>
+        </Head>
             <h1>FAQ</h1>
             <Link href="/">
                 Ir para o home
