@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+
+
 function Title({ children, as }) {
     const Tag = as
     return (
@@ -8,7 +10,6 @@ function Title({ children, as }) {
             <style jsx>{`
                 ${Tag} {
                     color: red;
-                    font-family: sans-serif
                 } 
             `}</style>
         </>
