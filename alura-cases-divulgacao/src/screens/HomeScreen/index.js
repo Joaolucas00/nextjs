@@ -3,8 +3,8 @@ import { theme } from '../../theme/theme';
 import { Image, Box, Text, Icon, Input, Button } from '../../theme/Componenetes';
 import Link from 'next/link'
 
-const LOGO_ALURA_URL = 'https://fakeimg.pl/94x44';
-const SIDE_IMAGE_URL = 'https://fakeimg.pl/2878x1640'
+const LOGO_ALURA_URL = 'imagens/alura-logo.svg';
+const SIDE_IMAGE_URL = 'imagens/alura-cases.png'
 
 function SideImage() {
   return (
