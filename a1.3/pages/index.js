@@ -3,6 +3,8 @@ import { useState } from 'react'
 import nookies from 'nookies'
 import { useRouter } from 'next/router'
 
+/* prefetch habilitado por padrão, prerecarrega a página*/
+
 function HomePage() {
 
   const [senha, setSenha] = useState('123456')
@@ -17,7 +19,7 @@ function HomePage() {
 
       <ul>
         <li>
-          <Link href="/sobre">
+          <Link href="/sobre" prefetch={false}> 
             <a>Ir para a /sobre</a>
           </Link>
         </li>
@@ -42,3 +44,11 @@ function HomePage() {
 }
 
 export default HomePage
+
+
+/**
+ * 
+ *  SSG (next build) [1000 posts]: 27.23 s
+ *  ISG (next build) [1000 posts]: 3.10 s
+ * 
+ */

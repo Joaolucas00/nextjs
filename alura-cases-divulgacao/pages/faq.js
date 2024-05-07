@@ -20,6 +20,7 @@ export async function getStaticProps() {
         props: {
             faq
         },
+        // revalidate: [number] -> revalida a página a cada x tempo o next faz uma requisição para a API para ver se o dado mudou. Beneficios do estatico e do dinamico ao mesmo tempo
     }
 }
 
