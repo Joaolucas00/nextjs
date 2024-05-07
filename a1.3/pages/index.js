@@ -1,11 +1,19 @@
 import Link from 'next/link'
+import { useState } from 'react'
+import nookies from 'nookies'
+import { useRouter } from 'next/router'
 
 function HomePage() {
+
+  const [senha, setSenha] = useState('123456')
+
+  const rota = useRouter()
+
   return (
     <div>
       Welcome to Next.js!
 
-      <img src="/images/avatar.png" />
+      <img src="https://github.com/Joaolucas00.png" />
 
       <ul>
         <li>
@@ -14,6 +22,21 @@ function HomePage() {
           </Link>
         </li>
       </ul>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        if (senha) {  
+          nookies.set(null, 'SENHA_SECRETA', senha, {
+            maxAge: 30 * 24 * 60 * 60,
+            path: '/'
+          })
+          rota.push('/area-logada')
+        } else {
+          alert('Informe a senha')
+        }
+      }}>
+        <input type='text' onChange={(e) => setSenha(e.target.value)} value={senha}/>
+         <button>Submit</button>
+      </form>
     </div>
   )
 }
