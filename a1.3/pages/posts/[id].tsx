@@ -1,5 +1,5 @@
+import { GetStaticProps } from 'next';
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 
 export async function getStaticPaths() {
   return {
@@ -10,12 +10,12 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   console.log(context);
 
   return {
     props: {
-      id: context.params.id
+      id: context.params?.id
     }
   }
 }

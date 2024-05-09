@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import nookies from 'nookies'
 import { useRouter } from 'next/router'
+// const importDinamico = dynamic(() => import(path))
 
 /* prefetch habilitado por padrão, prerecarrega a página*/
 
