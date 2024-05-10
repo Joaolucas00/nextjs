@@ -1,7 +1,7 @@
 # nextjs
 Projetos com nextjs
 
-# Glossário do NextJS
+## Glossário do NextJS
 
 - **Static**
     - Por padrão
