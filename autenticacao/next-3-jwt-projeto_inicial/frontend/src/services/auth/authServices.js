@@ -11,7 +11,7 @@ export const authService = {
         })
         .then(async (res) => {
             if (!res.ok) throw new Error('Usuário ou senha inválidos!')
-            const body = await res.json()
+            const body = res.body
             console.log('response: ', res)
             console.log('body: ', body);
         })
