@@ -1,6 +1,8 @@
+import { HttpClient } from "../../infra/HttpClient/HttpClient"
+
 export const authService = {
     login: async ({username, password}) => {
-        return fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login`, {
+        return HttpClient(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -11,7 +13,7 @@ export const authService = {
             if (!res.ok) throw new Error('Usuário ou senha inválidos!')
             const body = await res.json()
             console.log('response: ', res)
-            console.log('body', body);
+            console.log('body: ', body);
         })
     },
 }
