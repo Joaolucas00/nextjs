@@ -1,31 +1,43 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 export async function getStaticPaths() {
   return {
-    paths: [{
-      params: {id: '2'}
-    }],
-    fallback: false // boolean ou 'blocking' que segurar a requisição até ter o conteúdo, bom pra ISG
+    paths: [
+      { params: {id: '2'} },
+      { params: {id: '3'} }
+    ],
+    fallback: 'blocking' // boolean ou 'blocking' que segurar a requisição até ter o conteúdo, bom pra ISG
   }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   console.log(context);
+  const json = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params?.id}`)
+  .then((res) => res.json())
 
   return {
     props: {
-      id: context.params?.id
+      id: context.params?.id,
+      json
     }
   }
 }
 
-export default function Post({ id }) {
+export default function Post({ id, json }) {
+
+  const rota = useRouter()
+  if (rota.isFallback) {
+    return 'Essa página não existe, ainda !'
+  }
 
   return (
     <div>
       Id do post atual: { id }
-
+      <pre>
+        {JSON.stringify(json, null, 2)}
+      </pre>
       <ul>
         <li>
           <Link href="/">
