@@ -15,7 +15,7 @@ export const authService = {
             console.log('body: ', body);
         })
     },
-    getSession: async (ctx) => {
+    getSession: async (ctx = null) => {
         const token = tokenService.get(ctx)
 
         return HttpClient(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/session`, {
@@ -25,7 +25,7 @@ export const authService = {
             }
         }).then((res) => {
             if(!res.ok) throw new Error('Não autorizado')
-                return res.body.data
+            return res.body.data
         })
     },
 }
