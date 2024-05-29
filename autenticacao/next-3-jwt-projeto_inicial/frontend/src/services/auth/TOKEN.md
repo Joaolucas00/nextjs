@@ -11,7 +11,7 @@
 - **Risco se ele vazar**
     - Quanto maior o tempo de vida do token, maior o estrago quem tiver o token pode fazer
 
-## Refresh Token
+## Refresh Token:
 - **Pra que serve?**
     - Literalmente, para não precisar pedir a senha e o usuário para gerar um novo access_token
 - **Duração**
