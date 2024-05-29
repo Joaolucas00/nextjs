@@ -2,7 +2,7 @@ import { authService } from "./authServices"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 
-// Decorator Patterne 
+// Decorator Pattern
 export const withSession = (callback) => {
     return async (ctx) => {
         try {
