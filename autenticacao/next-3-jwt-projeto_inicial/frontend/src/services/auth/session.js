@@ -52,6 +52,7 @@ export const useSession = () => {
     }
 }
 
+// Higher-Order Components
 export function withSessionHOC(Component) {
     return function Wrapper(props) {
         const session = useSession()
