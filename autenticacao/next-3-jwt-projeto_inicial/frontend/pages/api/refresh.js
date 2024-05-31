@@ -13,6 +13,7 @@ const controllers = {
         nookies.set(ctx, REFRESH_TOKEN_NAME, req.body.refresh_token, {
             httpOnly: true,
             sameSite: 'lax', // nenhum subdominio vai ter acesso a esse token
+            path: '/'
         })
 
         res.json({
@@ -30,7 +31,7 @@ const controllers = {
         })
     },
     regenerateTokens: async (req, res) => {
-        try {
+
         const ctx = { req, res }
         const cookies = nookies.get(ctx)
         const refresh_token = cookies[REFRESH_TOKEN_NAME]
@@ -40,21 +41,20 @@ const controllers = {
                 refresh_token
             }
         })
-
+        if (refreshResponse.ok) {
             nookies.set(ctx, REFRESH_TOKEN_NAME, refreshResponse.body.data.refresh_token, {
                 httpOnly: true,
-                sameSite: 'lax'
+                sameSite: 'lax',
+                path: '/'
             })
             tokenService.save(refreshResponse.body.data.access_token, ctx)
-        
             res.status(200).json({
                 data: refreshResponse.body.data
             })
-        } catch (error) {
+        } else {
             res.status(401).json({
-                message: 401,
-                status: 'Não autorizado',
-                error
+                message: 'Não autorizado',
+                status: 401,
             })
         }
     }
