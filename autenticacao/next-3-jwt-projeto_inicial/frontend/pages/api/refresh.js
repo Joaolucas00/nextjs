@@ -47,11 +47,11 @@ const controllers = {
             })
             tokenService.save(refreshResponse.body.data.access_token, ctx)
         
-            res.json({
-                refreshResponse
+            res.status(200).json({
+                data: refreshResponse.body.data
             })
         } catch (error) {
-            res.json({
+            res.status(401).json({
                 message: 401,
                 status: 'Não autorizado',
                 error
