@@ -3,7 +3,7 @@ import nookies from 'nookies'
 import { tokenService } from "../../services/auth/tokenServices";
 
 // Ports & Adapterts
-export async function HttpClient(fetchUrl, fetchOptions) {
+export async function HttpClient(fetchUrl, fetchOptions = {}) {
     const options = {
         ...fetchOptions,
         headers: {

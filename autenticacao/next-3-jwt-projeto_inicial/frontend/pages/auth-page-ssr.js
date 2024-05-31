@@ -8,6 +8,9 @@ const AuthPageSSR = (props) => {
         <pre>
             {JSON.stringify(props, null, 2)}
         </pre>
+        <p>
+            <a href='/logout'>Logout</a>
+        </p>
         </div>
     )
 }

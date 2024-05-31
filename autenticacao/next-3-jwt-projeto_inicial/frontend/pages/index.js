@@ -52,6 +52,10 @@ export default function HomeScreen() {
           {JSON.stringify(values, null, 2)}
         </pre>
       </form>
+      <p>
+            <a href='/auth-page-ssr'>Auth Page SSR</a>
+            <a href='/auth-page-static'>Auth Page Static</a>
+        </p>
     </div>
   );
 }
