@@ -4,6 +4,7 @@ export async function cmsService({ query }) {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + process.env.TOKEN_CMS
         },
         body: JSON.stringify({
             query,
