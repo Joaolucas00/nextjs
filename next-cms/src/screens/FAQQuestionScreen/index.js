@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Footer } from '../../components/commons/Footer';
 import { Menu } from '../../components/commons/Menu';
 import { Box, Text, theme } from '../../theme/components';
+import { cmsService } from '../../infra/cms/cmsService';
 
 export async function getStaticPaths() {
   return {
@@ -13,8 +14,27 @@ export async function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   const { id } = params;
+
+
+  const contentQuery = `
+    query {
+    contentFaqQuestion {
+      _isValid
+      content {
+        value
+      }
+      title
+    }
+  }
+  `
+  const { data } = await cmsService({
+    query: contentQuery
+  })
+
+  console.log("Dados do CMS: ", data);
+
   return {
     props: {
       id,
