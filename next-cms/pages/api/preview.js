@@ -5,10 +5,11 @@ export default async function handler(req, res) {
     if(req.preview) {
         res.clearPreviewData()
         res.writeHead(307, { Location: previousPage})
-        res.end()
+        return res.end()
     }
+
 
     res.setPreviewData({})
     res.writeHead(307, { Location: previousPage})
-    res.end()
+    return res.end()
 }
