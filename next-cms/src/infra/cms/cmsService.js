@@ -1,8 +1,8 @@
 const globalQuery = `
     query {
-    globalFooter {
-        description
-    }
+        globalFooter {
+            description
+        }
     }
 `
 
