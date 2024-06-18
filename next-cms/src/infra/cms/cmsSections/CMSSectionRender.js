@@ -7,8 +7,10 @@ export function CMSSectionRender({ pageName }) {
 
         const Component = cmsSections[sectionProps.componentName]
 
+        if(!Component) return null
+
         return (
-                <Component key={sectionProps.id} {...sectionProps}/>
+            <Component key={sectionProps.id} {...sectionProps}/>
         )
     })
 }
