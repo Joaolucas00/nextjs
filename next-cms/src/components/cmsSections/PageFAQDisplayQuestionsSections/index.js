@@ -5,7 +5,7 @@ export function PageFAQDisplayQuestionsSections({
     componentName,
     id
 }) {
-
+  console.log(category);
     return (
         <Box
         tag="main"
