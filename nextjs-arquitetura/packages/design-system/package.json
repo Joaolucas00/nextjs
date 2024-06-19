@@ -1,0 +1,10 @@
+{
+  "name": "@alura/design-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Lucas",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^6.1.11"
+  }
+}
