@@ -1,0 +1,7 @@
+{
+  "name": "@alura/utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Lucas",
+  "license": "MIT"
+}
