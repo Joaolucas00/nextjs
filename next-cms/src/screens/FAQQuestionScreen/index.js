@@ -65,8 +65,6 @@ query($id: ItemId) {
     }
   })
 
-  console.log("Dados do CMS: ", data);
-
   return {
     props: {
       cmsContent: data,

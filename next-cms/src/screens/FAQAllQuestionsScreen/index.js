@@ -24,6 +24,7 @@ query {
         }
         ... on CommonFooterRecord {
           id
+          visible
         }
         ... on PagefaqDisplayquestionSectionRecord {
           id
@@ -53,7 +54,7 @@ query {
 }
 
 
-function FAQAllQuestionsScreen({ categories }) {
+function FAQAllQuestionsScreen() {
   return (
     <CMSSectionRender pageName="pageFaq" />
   )

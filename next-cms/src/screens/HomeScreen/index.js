@@ -24,6 +24,7 @@ query {
         }
         ...on CommonFooterRecord {
           id
+          visible
         }
         ...on PagehomeHerosectionRecord {
           id
@@ -44,7 +45,8 @@ query {
   return {
     props: {
       cmsContent
-    }
+    },
+    revalidate: 120
   }
 }
 
