@@ -8,7 +8,8 @@
     "base.js"
   ],
   "scripts": {
-    "lint": "echo 'Not necessary'"
+    "lint": "echo 'Not necessary'",
+    "test": "echo 'Not necessary'"
   },
   "dependencies": {
     "eslint-plugin-jest": "26.1.5",

@@ -5,13 +5,15 @@
   "author": "João Lucas",
   "license": "MIT",
   "scripts": {
-      "lint": "eslint ./**/*.{ts,tsx}"
+      "lint": "eslint ./**/*.{ts,tsx}",
+      "test": "jest"
   },
   "dependencies": {
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@alura/tsconfig-commons": "*",
-    "@alura/eslint-commons": "*"
+    "@alura/eslint-commons": "*",
+    "@alura/test-commons": "*"
   }
 }

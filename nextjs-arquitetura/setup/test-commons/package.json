@@ -18,7 +18,7 @@
     "jest-styled-components": "7.0.8"
   },
   "scripts": {
-    "test": "echo 'Not implemented'",
+    "test": "echo 'Not necessary'",
     "lint": "echo 'Not implemented'"
   }
 }

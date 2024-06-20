@@ -5,7 +5,8 @@
   "author": "João Lucas",
   "license": "MIT",
   "scripts": {
-    "lint": "echo 'Not necessary'"
+    "lint": "echo 'Not necessary'",
+    "test": "echo 'Not necessary'"
   },
   "files": [
     "base.josn"
