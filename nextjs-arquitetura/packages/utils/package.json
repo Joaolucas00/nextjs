@@ -5,9 +5,11 @@
   "author": "João Lucas",
   "license": "MIT",
   "scripts": {
-      "lint": "eslint ./**/*.{ts,tsx}"
+      "lint": "eslint ./**/*.{ts,tsx}",
+      "test": "jest --watchAll"
   },
   "devDependencies": {
+    "@alura/test-commons": "*",
     "@alura/tsconfig-commons": "*",
     "@alura/eslint-commons": "*"
   }
