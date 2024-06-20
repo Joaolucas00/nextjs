@@ -12,6 +12,7 @@
     "dev:web-public": "yarn web-public dev",
     "build:web-public": "yarn web-public build",
     "start:web-public": "yarn web-public start",
-    "design-system": "yarn workspace @alura/design-system"
+    "design-system": "yarn workspace @alura/design-system",
+    "utils": "yarn workspace @alura/utils"
   }
 }

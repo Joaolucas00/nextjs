@@ -1,0 +1,10 @@
+{
+  "name": "@alura/tsconfig-commons",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Lucas",
+  "license": "MIT",
+  "files": [
+    "base.josn"
+  ]
+}
