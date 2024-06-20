@@ -8,17 +8,21 @@
     ]
   },
   "dependencies": {
+    "eslint": "8.14.0",
+    "prettier": "2.6.2",
     "@types/styled-components": "5.1.34",
     "@types/node": "^20.14.6",
     "@types/react": "^18.3.3",
-    "typescript": "5.4.5"
+    "typescript": "4.5.5"
   },
   "scripts": {
+    "lint": "yarn workspaces run lint",
     "web-public": "yarn workspace @alura/web-public",
     "dev:web-public": "yarn web-public dev",
     "build:web-public": "yarn web-public build",
     "start:web-public": "yarn web-public start",
     "design-system": "yarn workspace @alura/design-system",
-    "utils": "yarn workspace @alura/utils"
+    "utils": "yarn workspace @alura/utils",
+    "lint:web-public": "yarn web-public lint"
   }
 }

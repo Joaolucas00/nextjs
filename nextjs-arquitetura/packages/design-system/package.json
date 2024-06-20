@@ -4,10 +4,14 @@
   "main": "index.js",
   "author": "João Lucas",
   "license": "MIT",
+  "scripts": {
+      "lint": "eslint ./**/*.{ts,tsx}"
+  },
   "dependencies": {
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "@alura/tsconfig-commons": "*"
+    "@alura/tsconfig-commons": "*",
+    "@alura/eslint-commons": "*"
   }
 }

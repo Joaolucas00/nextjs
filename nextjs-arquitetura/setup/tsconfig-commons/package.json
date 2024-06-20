@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "João Lucas",
   "license": "MIT",
+  "scripts": {
+    "lint": "echo 'Not necessary'"
+  },
   "files": [
     "base.josn"
   ]
