@@ -5,4 +5,7 @@
     "**/*.ts",
     "**/*.tsx"
   ],
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true
+  }
 }

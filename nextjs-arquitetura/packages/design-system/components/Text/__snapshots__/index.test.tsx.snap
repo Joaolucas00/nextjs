@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text/> Deve renderizar um h1 1`] = `
+.c0 {
+  font-family: sans-serif;
+}
+
 <div>
   <h1
-    class="sc-aYaIB jNjAcf"
+    class="c0"
   >
     Sniper Monkey
   </h1>

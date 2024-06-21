@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen Renderiza a página 1`] = `
+.c0 {
+  font-family: sans-serif;
+}
+
+<div>
+  <main>
+    <h1>
+      Home
+    </h1>
+    <p
+      class="c0"
+    >
+      Importando modulo local: @alura/utils/math/sum sum(2, 2): 
+      4
+       
+    </p>
+    <h1
+      class="c0"
+    >
+      design-system
+    </h1>
+  </main>
+</div>
+`;

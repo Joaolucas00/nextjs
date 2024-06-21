@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint ./**/*.{ts,tsx}",
-    "test": "echo 'Not implemented'"
+    "test": "jest"
   },
   "dependencies": {
     "styled-components": "6.1.11",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@alura/tsconfig-commons": "*",
+    "@alura/test-commons/base": "*",
     "@alura/eslint-commons": "*",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^10.0.1"
