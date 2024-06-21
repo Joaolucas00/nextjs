@@ -1,7 +1,7 @@
 import { Text } from "./index";
 import { customRender } from "@alura/test-commons/react-testing-library";
 
-const render = customRender()
+const render = customRender();
 
 describe("<Text/>", () => {
   test("Deve renderizar um h1", () => {
