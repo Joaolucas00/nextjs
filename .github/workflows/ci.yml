@@ -11,7 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Change diretory
-        run: cd github-actions-cicd
-      - name: Run linter
-        run: yarn lint
+      - name: "Run linter: github-actions-cicd"
+        run: cd github-actions-cicd && yarn lint
