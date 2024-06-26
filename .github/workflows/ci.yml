@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "Run linter: github-actions-cicd"
+      - name: Run Installation
+        run: cd github-actions-cicd && yarn install
+      - name: "Run lint: github-actions-cicd"
         run: cd github-actions-cicd && yarn lint
