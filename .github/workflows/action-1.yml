@@ -10,6 +10,19 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+  #issue_comment -> Executa o fluxo de trabalho quando um problema ou comentário de pull request é criado, editado ou excluído.
+    #types: [created, deleted]
+
+  #page_build -> Executa o fluxo de trabalho quando alguém faz push em um branch que é a fonte de publicação para GitHub Pages, se o GitHub Pages estiver habilitado no repositório.
+
+  #push -> Executa o fluxo de trabalho quando você faz push de um commit ou tag. Por exemplo, você pode executar um fluxo de trabalho quando o evento push ocorrer.
+
+  # Ou então, podemos usar o filtro branches para quando alguém fizer um push para a main ou em alguma branch que começa com releases/
+  #push:
+    #branches: 
+      #- 'main'
+      #- 'releases/**'
+ 
 # Definindo o que queremos executar
 jobs:
     exemplo: #Job: exemplo
