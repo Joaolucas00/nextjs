@@ -1,0 +1,19 @@
+{
+  "name": "github-actions-cicd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Lucas",
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev",
+    "export": "next export",
+    "test": "echo 'Não implementado'"
+  },
+  "dependencies": {
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
